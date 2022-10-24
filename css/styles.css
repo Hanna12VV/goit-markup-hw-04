@@ -1,4 +1,6 @@
-
+html {
+    box-sizing: border-box;
+}
 :root {
     --primary-text-color: #757575;
     --title-text-color: #212121;
@@ -12,13 +14,35 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
+    box-sizing: inherit;
 } 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+}
+img {
+    display: block;
+}
 
+.style-header {
+    border-bottom: 1px solid #ececec;
+}
+.header-container, .nav-group, .contact-link {
+    display: flex;
+}
 .style-footer {
     background-color: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 .header-nav, .contact-link, .footer-link, .feature-list, .work-list, .team-list, .portfolio-filters, .portfolio-projects {
     list-style: none;
+    text-decoration: none;
+    color: currentColor;
 }
 .logo {
     font-family: 'Raleway';
@@ -27,6 +51,13 @@ body {
     line-height: 1.19;
     color: var(--accent-color);
     text-decoration: none;
+
+    width: 145px;
+    margin-right: 93px;
+}
+.style-header .logo, .style-header .nav-link, .style-header .contact-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .logo-header {
     color: var(--title-text-color);
@@ -34,12 +65,29 @@ body {
 .logo-footer {
     color: var(--primary-white-color);
 }
+.logo-footer-margin {
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 0px;
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+    margin-right: 344px;
+}
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+    }
 .nav-link {
     color: var(--link-text-color);
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+    display: block;
 }
 .contact-link .mail-link, .contact-link .tel-link {
     color: var(--primary-text-color);
@@ -55,13 +103,21 @@ body {
 .nav-link.current {
     color: var(--accent-color);
 }
-
+.footer-link {
+    width: 231px;
+}
 .adress-link {
     color: var(--primary-white-color);
     font-style: normal;
     line-height: 1.71;
     text-decoration: none;
-}
+    margin-bottom: 9px;
+    display: block;
+    }
+.footer-link .mail-link {
+    display: block;
+    margin-bottom: 9px;
+    }
 .footer-link .mail-link, .footer-link .tel-link {
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
@@ -71,20 +127,51 @@ body {
 .adress-link:hover, .mail-link:hover, .tel-link:hover, .adress-link:focus, .mail-link:focus, .tel-link:focus {
     color: var(--accent-color);
 }
+.list {
+    flex-basis: calc((100%-30*3)/4);
+    width: 270px;
+}
+.container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 /* Розмітка головної сторінки */
 
 .header {
     background-color: #2F303A;
-}
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    }
 .header-title {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    text-align: center;
-    color: var(--primary-white-color)
+    color: var(--primary-white-color);
+    
+    width: 696px;
+    margin-left: 452px;
+    margin-right: 452px;
+    margin-bottom: 30px;
 }
 .header-button {
     background-color: var(--accent-color);
@@ -95,64 +182,134 @@ body {
     line-height: 1.88;
     letter-spacing: 0.06em;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    
+    display: inline-block;
+    border-radius: 4px;
+    min-width: 216px;
+    padding: 10px 32px;
+    border: 1px solid transparent;
 }
-
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .section-title {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
+
+    margin-bottom: 50px;
 }
 .title {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+
+    margin-bottom: 10px;
+    width: 270px;
 } 
 .feature-text {
     line-height:1.71;
+    width: 270px;
+}
+.section.work {
+    padding-top: 0;
+}
+.work-img {
+    width: 370px;
+    flex-basis: calc((100%-30*2)/3);
 }
 .section.team {
     background-color: #F5F4FA;
+}
+.text {
+    padding: 30px 0;
+    text-align: center;
+    width: 270px;
 }
 .team-title {
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
+    
+    margin-bottom: 10px;
 }
 .team-text {
     font-size: 16px;
     line-height: 1.18;
+    width: 270px;
+}
+.feature-list, .work-list, .team-list {
+    display: flex;
+    gap: 30px;    
 }
 
 /* Розмітка сторінки портфоліо*/
 
 .filters-btn {
-    color: var(--link-text-color);
+    color: var(--link-text-color) ;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
     cursor: pointer;
+
+    background-color: #F5F4FA;
+    display: inline-block;
+    border-radius: 4px;
+    min-width: 125px;
+    padding: 5.69px 22px;
+    border: 1px solid transparent;
+}
+.filters-btn:first-child {
+    min-width: 73px;
+    padding: 5.69px 25px;
 }
 .filters-btn:hover, .filters-btn:focus {
     background-color: var(--accent-color);
     color: var(--primary-white-color);
+}
+.projects {
+    width: 370px;
+    padding: 18.97px 24px;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
 }
 .projects-title {
     color: var(--title-text-color);
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    min-width: 322px;
+    margin-bottom: 4px;
 }
 .projects-text {
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.88;
+    min-width: 322px;
 }
 .portfolio-link {
     text-decoration: none;
+}
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    }
+.filters-container {
+    margin-bottom: 50px;
+}
+.portfolio-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
