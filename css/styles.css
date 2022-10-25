@@ -52,12 +52,13 @@ img {
     color: var(--accent-color);
     text-decoration: none;
 }
-.style-header .logo, .style-header .nav-link, .style-header .contact-link {
+.style-header .nav-link, .style-header .contact-link {
     padding-top: 32px;
     padding-bottom: 32px;
 }
 .style-header .logo {
-    width: 145px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin-right: 93px;
 }
 .logo-header {
@@ -167,9 +168,6 @@ img {
     text-transform: uppercase;
     color: var(--primary-white-color);
     
-    width: 696px;
-    margin-left: 452px;
-    margin-right: 452px;
     margin-bottom: 30px;
 }
 .header-button {
@@ -183,10 +181,8 @@ img {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    margin-right: 692px;
-    margin-left: 692px;
     
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
@@ -281,8 +277,7 @@ img {
     min-width: 125px;
     padding: 5.69px 22px;
     border: 1px solid transparent;
-    margin-bottom: 50px;
-}
+    }
 .filters-btn:first-child {
     min-width: 73px;
     padding: 5.69px 25px;
@@ -319,6 +314,7 @@ img {
     display: flex;
     justify-content: center;
     gap: 8px;
+    margin-bottom: 50px;
 }
 .portfolio-projects {
     display: flex;
