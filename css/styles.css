@@ -105,7 +105,6 @@ img {
 .nav-link.current {
     color: var(--accent-color);
 }
-
 .list {
     flex-basis: calc((100%-30*3)/4);
 }
@@ -129,7 +128,7 @@ img {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.mail-link {
+.mail-link, .tel-link {
     display: flex;
     align-items: center;    
 }
@@ -138,12 +137,14 @@ img {
     stroke: var(--primary-text-color);
     fill: transparent;
 }
-.envelope-active:hover {
+.mail-link:hover, .tel-link:hover, 
+.mail-link:focus, .tel-link:focus {
     color: var(--accent-color);
-}
-.envelope-active:hover .contact-icon {
+}    
+.mail-link:hover .contact-icon, .mail-link:focus .contact-icon,
+.tel-link:hover .contact-icon, .tel-link:focus .contact-icon {
     fill: currentColor;
-}
+} 
 
 /* Розмітка головної сторінки */
 
@@ -291,13 +292,14 @@ img {
     background-color: #FFFFFF;
     border-radius: 50%;
 }
-.ihor-inst:hover  {
+.socials-link:hover, .socials-link:focus {
     background-color: var(--accent-color);
 }
 .socials-icon {
     fill: currentColor;
 }
-.ihor-inst:hover .socials-icon {
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
     fill: var(--primary-white-color);
 }
 .customers-list {
@@ -321,11 +323,12 @@ img {
 .icon-logo {
     fill: currentColor;
 }
-.foster-peters:hover {
+.customers-icon:hover, .customers-icon:focus {
     color: var(--accent-color);
     border: 1px solid var(--accent-color)
 }
-.foster-peters:hover .icon-logo {
+.customers-icon:hover .icon-logo,
+.customers-icon:focus .icon-logo {
     fill: currentColor;
 }
 
@@ -456,6 +459,6 @@ img {
     display: flex;
     align-items: baseline;
 }
-.twitter-footer:hover {
+.socials-link-footer:hover, .socials-link-footer:focus {
     background-color: var(--accent-color);
 }
